@@ -34,7 +34,10 @@ body {	/*the outer layer of the site and global style attributes*/
 
 body, html {height:100%; width:100%; margin:0; padding:0;}
 
-div.wrap {height:100%; overflow:hidden;}
+/*div.wrap {height:100%; overflow:hidden;}*/
+
+
+#wrap {height:100%; width:100%;}
 
 body {overflow: hidden; }
 
@@ -42,6 +45,7 @@ body {overflow: hidden; }
 #bench-img img {
 	position: absolute;
 	display: block;
+/*	margin:0 auto;*/
 	height: 100%;
 	width: 100%;
 	border-collapse: collapse;
@@ -53,7 +57,28 @@ body {overflow: hidden; }
     height: 100%;
     background: rgba(0,0,0,.5);
     opacity: .5;
-}*/
+}*/	
+
+#foreground {
+	position: relative;
+/*	display: block;*/
+	border-collapse: collapse;
+	object-fit:cover;
+	padding: 0px;
+	top:0;
+	left:0;
+	height:100%; 
+	width:100%;
+	z-index: 50;
+}
+
+#container {
+	height:100%;
+	width:100%;
+	position: absolute;
+	top: calc(50% - 50px);
+	z-index: 50;
+}
 
 #title {
 	display:none;
@@ -63,30 +88,44 @@ body {overflow: hidden; }
     color: white;
     background:rgba(0,0,0,.8);
     font-size: 40px;
-    top: calc(50% - 50px);
+    /*top: calc(50% - 50px);*/
     left: calc(50% - 300px);
     text-align: center;
 	vertical-align: middle;
 	line-height: 100px;
+	z-index: 100;
 }
 
 #options {
 	display:none;
-	padding:15px;
-    position: absolute;
-    color: white;
-    background:rgba(0,0,0,.2);
-    font-size: 20px;
-    top: calc(42% - 25px);
-    left: calc(50% - 100px);
+	margin:0px;
+	width: 400px;
+    height: 200px;
+	position:absolute;
+	background:rgba(255,255,255,.2);
+	top: 140px;
+    left: calc(50% - 200px);
     text-align: center;
 	vertical-align: middle;
-	line-height: 100px;
 }
 
-/*#login {
-	position: absolute;
-	top: 20px;
+.button {
+	/*display:none;	
+	/*top:20px;*/
+	margin:20px;
+	/*padding:10px 80px;*/
+	width:360px;
+	height:40px;
+    position: relative;
+    color: white;
+    background:rgba(255,255,255,0);
+    font-size: 20px;
+    text-align: center;
+	vertical-align: middle;
+	line-height: 40px;
+}
+
+#login {
 }
 
 #instr {
@@ -96,4 +135,3 @@ body {overflow: hidden; }
 #about {
 
 }
-*/

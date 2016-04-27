@@ -1,8 +1,6 @@
 $(document).ready(function(){
 	
-	// Question 4
-	// IMPLEMENT "SHOW MODAL" WHEN "CLICK ON LOGIN BUTTON FROM MAIN PAGE" HERE
-	$("#bench-img").hover(function() {$("#title").fadeIn(1000);}
+	$("#foreground").hover(function() {$("#title").fadeIn(1000);}
 		// function(){$(this).animate({width: 400px, height:400px}, 1000);},        
 	 //    function(){$(this).animate({width: 200px, height:200px}, 1000);}
 	 );
@@ -20,7 +18,7 @@ $(document).ready(function(){
 	// why isn't the pointer to hand thing working???
 	$("#title").hover(
 		function() {
-			if($("#title").position().top <= 100) {
+			if($("#container").position().top <= 200) {
 				$("#title").css({
 				transition: 'background-color .5s ease-in-out',
 			    "background-color": "",
@@ -43,30 +41,71 @@ $(document).ready(function(){
 	 );
 
 	$("#title").click(function() {
-		if($("#title").position().top <= 100 ) {
+		if($("#container").position().top <= 200 ) {
 			console.log($("#title").position().top)
 	        {return;}
 	    } else { 
-	        $("#title").animate({
-	            top: '-=200'
+	        $("#container").animate({
+	            top: "22%",
 	        },
-	        { "duration": 1000, 
+	        { "duration": 800, 
 	          "easing": "linear" }
 	        );
+	        // $("#title").css({
+	        // 	"transition:": "background-color .5s ease-in-out",
+	        // 	"width":"100%",
+	        // 	"left":"0px"
+	        // });
 	        $("#options").fadeIn(1000);
     	}
 
+    $("#login").hover(
+		function() {
+	    		$("#login").css({
+				transition: 'background-color .5s ease-in-out',
+			    "background-color": "",
+			    "background-color": "rgba(255,255,255,.4)",
+				"cursor": "pointer"});
+	    	},
+		function() {$("#login").css({
+			transition: 'background-color .5s ease-in-out',
+		    "background-color": "",
+		    "background-color": "rgba(0,0,0,0)"});}
+		// function(){$(this).animate({width: 400px, height:400px}, 1000);},        
+	 //    function(){$(this).animate({width: 200px, height:200px}, 1000);}
+	);
 
-	 //  	$( "#title" ).animate({
-		//     top: "+=200",
-		// }, 1000);
+	$("#instr").hover(
+		function() {
+	    		$("#instr").css({
+				transition: 'background-color .5s ease-in-out',
+			    "background-color": "",
+			    "background-color": "rgba(255,255,255,.4)",
+				"cursor": "pointer"});
+	    	},
+		function() {$("#instr").css({
+			transition: 'background-color .5s ease-in-out',
+		    "background-color": "",
+		    "background-color": "rgba(0,0,0,0)"});}
+		// function(){$(this).animate({width: 400px, height:400px}, 1000);},        
+	 //    function(){$(this).animate({width: 200px, height:200px}, 1000);}
+	);
+
+    $("#about").hover(
+		function() {
+	    		$("#about").css({
+				transition: 'background-color .5s ease-in-out',
+			    "background-color": "",
+			    "background-color": "rgba(255,255,255,.4)",
+				"cursor": "pointer"});
+	    	},
+		function() {$("#about").css({
+			transition: 'background-color .5s ease-in-out',
+		    "background-color": "",
+		    "background-color": "rgba(0,0,0,0)"});}
+		// function(){$(this).animate({width: 400px, height:400px}, 1000);},        
+	 //    function(){$(this).animate({width: 200px, height:200px}, 1000);}
+	 );
+
 	});
-	// IMPLEMENT "HIDE MODAL" WHEN "CLICK ON SUBMIT BUTTON FROM MODAL BOX" HERE
-	// $("#submit-button").click(function() {$("#modal-container").hide();})
-	// IMPLEMENT "HIDE MODAL" WHEN "CLICK ON CANCEL BUTTON FROM MODAL BOX" HERE
-	// $("#cancel-button").click(function() {$("#modal-container").hide();})
-	
-	// Question 5
-	// IMPLEMENT "HIDE MODAL" WHEN "CLICK ON MODAL OVERLAY" HERE
-	// $("#modal-overlay").click(function() {$("#modal-container").hide();})
 });
